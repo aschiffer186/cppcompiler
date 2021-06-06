@@ -13,5 +13,6 @@ namespace ascppcompiler::preprocessor
                 throw exceptions::file_not_found("file_not_found exception: Fatal error, could not open source file: " + filename + ". Compilation stopped.");
             YY_BUFFER_STATE curr_buffer = yy_create_buffer(curr_file, YY_BUF_SIZE);
         }
+        return lexed_files;
     }
 } // namespace ascppcompiler::preprocessor

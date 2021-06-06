@@ -14,4 +14,4 @@ add_subdirectory(preprocessor)
 
 add_executable(${PROJECT_NAME} main.cpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE preprocessor)
-target_link_directories(${PROJECT_NAME} PRIVATE preprocessing)
+target_link_libraries(${PROJECT_NAME} PRIVATE exceptions)

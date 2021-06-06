@@ -1,6 +1,9 @@
 #ifndef IO_EXCEPTION_H
 #define IO_EXCEPTION_H 1
 
+
+#include <string>
+
 #include "exception_base.h"
 
 /**
@@ -21,6 +24,7 @@ namespace ascppcompiler::exceptions
     {
         public:
             explicit io_exception(ascpp_exception* cause) noexcept;
+            io_exception(io_exception&&) noexcept = default;
             virtual ~io_exception() = default;
     };
 
@@ -48,7 +52,7 @@ namespace ascppcompiler::exceptions
              * \param cause [optional] The cause of the exception
              */ 
             explicit file_not_found(const std::string& message, ascpp_exception* cause = nullptr);
-
+            file_not_found(file_not_found&& ex) noexcept = default;
             const char* get_message() const noexcept override;
 
         private: 
