@@ -201,6 +201,8 @@ void *yyalloc ( yy_size_t  );
 void *yyrealloc ( void *, yy_size_t  );
 void yyfree ( void *  );
 
+/* Begin user sect3 */
+
 #define yywrap() (/*CONSTCOND*/1)
 #define YY_SKIP_YYWRAP
 
@@ -467,8 +469,9 @@ extern int yylex (void);
 #undef yyTABLES_NAME
 #endif
 
-#line 14 "lexer.l"
+#line 82 "lexer.l"
 
-#line 472 "lexer.h"
+
+#line 475 "lexer.h"
 #undef yyIN_HEADER
 #endif /* yyHEADER_H */
